@@ -161,7 +161,7 @@ class TodoListProcessor:
         todos = sum(self.domain.todos.values(), [])  # type: List[todo_node]
         document = new_document('')
         for node in doctree.traverse(todolist):
-            if not self.config.todo_include_todos:
+            if not self.config.todo_include_todolist:
                 node.parent.remove(node)
                 continue
 
