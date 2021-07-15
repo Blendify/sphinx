@@ -31,9 +31,7 @@ logger = logging.getLogger(__name__)
 #
 # Note: "fork" is not recommended on macOS and py38+.
 #       see https://bugs.python.org/issue33725
-parallel_available = (multiprocessing and
-                      (os.name == 'posix') and
-                      not (sys.version_info > (3, 8) and platform.system() == 'Darwin'))
+parallel_available = (multiprocessing)
 
 
 class SerialTasks:
